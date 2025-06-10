@@ -479,7 +479,11 @@ function getImageFileName($dishName) {
                                     </div>
                                     <h4 class="fw-bold mb-3 text-center" style="font-size: 1.5rem; letter-spacing: -1px; color: #222;">Về SmartFit</h4>
                                     <p class="mb-0 text-muted" style="font-size: 1.18rem; text-align: justify; line-height: 1.7;">
-                                        <span class="fw-semibold text-primary">SmartFit</span> sử dụng công nghệ AI tiên tiến để giúp bạn theo dõi hoạt động thể thao và nhận gợi ý dinh dưỡng phù hợp. Hệ thống của chúng tôi phân tích dữ liệu từ các thông số cá nhân và hoạt động của bạn để đưa ra kết quả chính xác nhất, đồng hành cùng bạn trên hành trình nâng cao sức khỏe.
+                                        <span class="fw-semibold text-primary">SmartFit</span> sử dụng công nghệ AI tiên tiến để giúp bạn theo 
+                                        dõi hoạt động thể thao và nhận gợi ý dinh dưỡng phù hợp. 
+                                        Hệ thống của chúng tôi phân tích dữ liệu từ các thông số cá nhân 
+                                        và hoạt động của bạn để đưa ra kết quả chính xác nhất, 
+                                        đồng hành cùng bạn trên hành trình nâng cao sức khỏe.
                                     </p>
                                 </div>
                             </div>

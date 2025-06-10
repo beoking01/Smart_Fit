@@ -2,8 +2,6 @@
 require_once 'db_config.php';  // Thêm kết nối database
 require_once 'auth.php';
 
-// Xử lý đăng nhập, đăng ký, đăng xuất nếu có (giữ nguyên phần này nếu đã có)
-// ...
 
 // Xác định tab đang active
 $activeTab = $_GET['tab'] ?? 'calculator';
