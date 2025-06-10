@@ -11,14 +11,12 @@ unset($item);
 $prefill = $_SESSION['prefill_calculator'] ?? [];
 
 if (isset($_POST['update_profile'])) {
-    // ... code cập nhật profile ...
     $_SESSION['prefill_calculator'] = [
         'gender' => ($_POST['gender'] === 'Nam') ? 'male' : (($_POST['gender'] === 'Nữ') ? 'female' : ''),
         'age' => $_POST['age'] ?? '',
         'height' => $_POST['height'] ?? '',
-        'weight' => $_POST['weight'] ?? '',
+        'weight' => $_POST['weight'] ?? ''
     ];
-    // ... code khác ...
 }
 
 // Thêm hàm chuyển tên món sang tên file ảnh
@@ -72,15 +70,15 @@ function getImageFileName($dishName) {
     <!-- CSS cho fullwidth-bg không bị lệch khi có scrollbar -->
     <style>
     .fullwidth-bg {
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: calc(-50vw + 50%);
-      margin-right: calc(-50vw + 50%);
-      background: #fff;
-      margin-bottom: 2.5rem;
-      box-sizing: border-box;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        background: #fff;
+        margin-bottom: 2.5rem;
+        box-sizing: border-box;
     }
     </style>
 </head>
@@ -554,13 +552,13 @@ function getImageFileName($dishName) {
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3">
-                                                <input type="number" step="0.1" class="form-control" id="heartRate" name="heartRate" placeholder="Nhịp tim (nhịp/phút)" required value="<?= htmlspecialchars($_POST['heartRate'] ?? '') ?>">
+                                                <input type="number" step="0.1" class="form-control" id="heartRate" name="heartRate" placeholder="Nhịp tim (nhịp/phút)" required max="180" value="<?= htmlspecialchars($_POST['heartRate'] ?? '') ?>">
                                                 <label for="heartRate">Nhịp tim (nhịp/phút)</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3">
-                                                <input type="number" step="0.1" class="form-control" id="bodyTemp" name="bodyTemp" placeholder="Nhiệt độ cơ thể (°C)" required value="<?= htmlspecialchars($_POST['bodyTemp'] ?? '') ?>">
+                                                <input type="number" step="0.1" class="form-control" id="bodyTemp" name="bodyTemp" placeholder="Nhiệt độ cơ thể (°C)" required max="43" value="<?= htmlspecialchars($_POST['bodyTemp'] ?? '') ?>">
                                                 <label for="bodyTemp">Nhiệt độ cơ thể (°C)</label>
                                             </div>
                                         </div>
