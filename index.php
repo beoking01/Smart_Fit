@@ -83,32 +83,6 @@ function getImageFileName($dishName) {
     </style>
 </head>
 <body>
-    <!-- Toast Notification -->
-    <?php if ($formSubmitted): ?>
-    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <?php if ($modelError): ?>
-                <i class="bi bi-exclamation-triangle-fill text-danger me-2"></i>
-                <strong class="me-auto">Lỗi</strong>
-                <?php else: ?>
-                <i class="bi bi-check-circle-fill text-success me-2"></i>
-                <strong class="me-auto">Thành công</strong>
-                <?php endif; ?>
-                <small>Vừa xong</small>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body">
-                <?php if ($modelError): ?>
-                <?= $modelErrorMessage ?>
-                <?php else: ?>
-                Đã tính toán thành công <?= $caloriesBurnt ?> calories và lưu vào lịch sử.
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
-    <?php endif; ?>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
@@ -166,6 +140,32 @@ function getImageFileName($dishName) {
             </div>
         </div>
     </nav>
+
+    <!-- Toast Notification đặt ngay dưới navbar -->
+    <?php if ($formSubmitted): ?>
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 1055; margin-top: 70px;">
+        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <?php if ($modelError): ?>
+                <i class="bi bi-exclamation-triangle-fill text-danger me-2"></i>
+                <strong class="me-auto">Lỗi</strong>
+                <?php else: ?>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <strong class="me-auto">Thành công</strong>
+                <?php endif; ?>
+                <small>Vừa xong</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <?php if ($modelError): ?>
+                <?= $modelErrorMessage ?>
+                <?php else: ?>
+                Đã tính toán thành công <?= $caloriesBurnt ?> calories và lưu vào lịch sử.
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
 
     <!-- Main Content -->
     <main class="container py-4 flex-grow-1">
