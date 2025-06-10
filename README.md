@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SmartFit ML Service
 
 Đây là microservice AI cho ứng dụng SmartFit, sử dụng Flask để phục vụ model machine learning đã được train.
@@ -69,3 +70,6 @@ Model được sử dụng là một scikit-learn pipeline đã được train v
 
 - Đảm bảo rằng model pipeline.pkl của bạn được train với đúng 6 features theo thứ tự: age, height, weight, duration, heart_rate, body_temp
 - Nếu cấu trúc model của bạn khác, hãy điều chỉnh file app.py phù hợp
+=======
+# Smart_Fit
+>>>>>>> 0191f84a709b12c5f9a0e89964c2380195340a92
